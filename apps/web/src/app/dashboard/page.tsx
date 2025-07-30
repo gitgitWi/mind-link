@@ -1,16 +1,15 @@
-"use client"
-import { authClient } from "@/lib/auth-client";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+'use client';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+import { authClient } from '@/lib/auth-client';
 
 export default function Dashboard() {
   const router = useRouter();
   const { data: session, isPending } = authClient.useSession();
 
-
   useEffect(() => {
-    if (!session && !isPending) {
-      router.push("/login");
+    if (!(session || isPending)) {
+      router.push('/login');
     }
   }, [session, isPending]);
 
