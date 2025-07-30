@@ -1,5 +1,6 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
+  "extends": ["ultracite"],
   "files": {
     "ignoreUnknown": false,
     "includes": [
@@ -10,16 +11,19 @@
       "!**/dev-dist",
       "!**/.zed",
       "!**/.vscode",
-      "!**/routeTree.gen.ts",
-      "!**/src-tauri",
-      "!**/.nuxt",
       "!bts.jsonc",
       "!**/.expo",
       "!**/.wrangler",
-      "!**/.source"
+      "!**/.source",
+      "!**/worker-configuration.json"
     ]
   },
-  "extends": [
-    "ultracite"
-  ]
+  "linter": {
+    "rules": {
+      "recommended": true,
+      "style": {
+        "noNonNullAssertion": "warn"
+      }
+    }
+  }
 }
