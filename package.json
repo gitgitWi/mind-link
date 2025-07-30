@@ -6,7 +6,7 @@
     "packages/*"
   ],
   "scripts": {
-    "check": "biome check --write .",
+    "check": "biome check --write . --log-level=error",
     "dev": "turbo dev",
     "build": "turbo build",
     "check-types": "turbo check-types",
