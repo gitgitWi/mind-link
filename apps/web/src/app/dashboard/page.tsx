@@ -1,7 +1,7 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
-import { authClient } from '@/lib/auth-client';
+import { authClient } from '~/lib/auth-client';
 
 export default function Dashboard() {
   const router = useRouter();
