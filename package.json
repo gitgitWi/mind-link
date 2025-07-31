@@ -6,7 +6,6 @@
     "packages/*"
   ],
   "scripts": {
-    "check": "biome check --write . --log-level=error",
     "dev": "turbo dev",
     "build": "turbo build",
     "check-types": "turbo check-types",
@@ -16,13 +15,13 @@
     "db:push": "turbo -F server db:push",
     "db:studio": "turbo -F server db:studio",
     "db:generate": "turbo -F server db:generate",
-    "db:migrate": "turbo -F server db:migrate"
+    "db:migrate": "turbo -F server db:migrate",
+    "refactor:fix": "biome check --write . --log-level=error"
   },
-  "dependencies": {},
+  "packageManager": "bun@1.2.19",
   "devDependencies": {
     "turbo": "^2.5.4",
     "@biomejs/biome": "2.1.2",
     "ultracite": "5.1.1"
-  },
-  "packageManager": "bun@1.2.19"
+  }
 }
